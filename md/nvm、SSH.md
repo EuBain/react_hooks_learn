@@ -5,7 +5,7 @@ npm i n -g 全局安装
 安装成功后就可以直接使用n来管理 node版本
 
 windows系统稍微复杂一点，目前只有nvm-windows能够在windows上支持node版本管理
-GitHub的源码地址及安装包下载地址：nvm-windows下载地址
+GitHub的源码地址及安装包下载地址：[nvm-windows下载地址](https://github.com/coreybutler/nvm-windows/releases)
 
 **安装过程：**
 

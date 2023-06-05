@@ -1,6 +1,6 @@
 import useCreation from "../useCreation";
-import useLastest from "../Advanced/useLastest";
-import useUpdate from "../useUpdate";
+import useLastest from "../useLastest";
+import useUpdate from "../../Effcet/useUpdate";
 
 
 

@@ -6,4 +6,4 @@
 pnpm create vite
 ```
 
-xuexi
+我想把这个推到master上去

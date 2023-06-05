@@ -6,4 +6,3 @@
 pnpm create vite
 ```
 
-xuexi

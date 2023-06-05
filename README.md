@@ -5,3 +5,5 @@
 //使用pnpm安装vite
 pnpm create vite
 ```
+
+xuexi

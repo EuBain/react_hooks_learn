@@ -6,4 +6,6 @@
 pnpm create vite
 ```
 
-xuexi
+我想把这个推到master上去
+
+今天学不动了，明天在学吧

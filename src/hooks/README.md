@@ -4,18 +4,15 @@ ahooks中将hooks分为几大类。
 
 分别为： 
 
-useRequest    专门做请求处理的Request Hook
+| useRequest：<br>请求处理Hook |  Effect：<br>副作用Hookd |
+|:------------------------------:|:---------------------------:|
 
-Scene              专用场景使用的Hook
+| Dom：<br>Dom操作Hook | Scene：<br> 专用场景Hook|
+|:------------------------------:|:---------------------------:|
 
-LifeCycle         生命周期加强Hook
+|LifeCycle：<br>生命周期Hook| Advanced：<br>高级Hook |
+|:------------------------------:|:---------------------------:|
 
-State                状态处理Hook
+| State：<br>状态处理Hook | Dev：<br> 开发Hook	|
+|:------------------------------:|:---------------------------:|
 
-Effect               副作用Hookd
-
-Dom                Dom操作Hook
-
-Advanced       高级Hook
-
-Dev                 开发Hook

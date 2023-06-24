@@ -1,57 +1,47 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import {Ajax} from './services/Mock/index.js'
+import { Suspense } from 'react'
+
 import './App.css'
-import useStore from './store/useStore.js'
+
 import { observer } from 'mobx-react'
-import store from '@/store'
 
+import { useRoutes, Navigate  } from 'react-router-dom';
+import { HomeRoutes } from './Home';
+import { routes } from './router/index.tsx';
+import useMemoizedFn from './hooks/Advanced/useMemoizedFn/index.tsx';
 
-function App(props) {
-  const {demo:{secondsPassed, increase, reset ,aaa}} = useStore()
-// const {demo} = props
-// const {demo} = store
-  // const [count, setCount] = useState(0)
-  // useEffect(() => {
-  //   data?.addCount()
-  // }, [])
-  // console.log(demo.aaa)
-  const bbb = aaa.slice()
-console.log(secondsPassed,bbb,aaa)
-  const request = async() => {
-    const res = await Ajax.Get(1)
-    console.log(res)
+type OldRender = () => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null
+
+let router: React.ReactElement<any, string | React.JSXElementConstructor<any>> | null;
+
+const patchClientRoutes = ({routes}) => {
+
+}
+
+export const Router = ()  => { 
+  // 获取路由参数
+  // 处理路由
+  patchClientRoutes?.({routes})
+  console.log(routes)
+  router = useRoutes(routes)
+  // return router
+}
+ 
+const  render = (fn) => {
+    fn()
   }
+
+
+function App() {
+  const a = useMemoizedFn(render)
+  render ? render(Router) : Router()
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={reset
-        }>
-          {aaa.dd}
-        </button>
-        <button onClick={increase}>
-          number is {secondsPassed}
-        </button>
-        <ModalByButton></ModalByButton>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Suspense fallback={ <h2>Loading... 加载中... </h2> }>
+       {/* <Router /> */}
+       {router}
+    </Suspense>
   )
 }
 
-export default observer(App)
+export default App
+
+

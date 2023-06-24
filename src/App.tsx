@@ -1,28 +1,8 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import {Ajax} from './Mock.js'
+import {Ajax} from './services/Mock/index.js'
 import './App.css'
-<<<<<<< HEAD
-import ModalByButton from './components/ModalByButton/index.js'
-
-function App() {
-  const [count, setCount] = useState(0)
-  // useEffect(() => {
-  //   request()
-  // }, [])
-
-  // const request = async() => {
-  //   const res = await Ajax.Get(1)
-  //   console.log(res)
-  // }
-
-  // window.onbeforeunload = (event) => {
-  //   // event.preventDefault()
-  //   event.returnValue= '确定要离开嘛'
-  // }
-
-=======
 import useStore from './store/useStore.js'
 import { observer } from 'mobx-react'
 import store from '@/store'
@@ -43,7 +23,6 @@ console.log(secondsPassed,bbb,aaa)
     const res = await Ajax.Get(1)
     console.log(res)
   }
->>>>>>> refs/remotes/origin/release
   return (
     <>
       <div>
@@ -56,19 +35,12 @@ console.log(secondsPassed,bbb,aaa)
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-<<<<<<< HEAD
-        <button onClick={() => {setCount((count) => count + 1)
-        // request()
-        }}>
-          count is {count}
-=======
         <button onClick={reset
         }>
           {aaa.dd}
         </button>
         <button onClick={increase}>
           number is {secondsPassed}
->>>>>>> refs/remotes/origin/release
         </button>
         <ModalByButton></ModalByButton>
         <p>

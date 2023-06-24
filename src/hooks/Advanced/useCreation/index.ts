@@ -1,22 +1,5 @@
+import { depsAreSame } from "@/utils";
 import { DependencyList, useRef } from "react";
-
-
-
-
-//用来判断依赖项是否相等，浅比较
-const depAreSame = (
-    oldDeps: DependencyList,
-    newDeps: DependencyList,
-): boolean => {
-    if(oldDeps === newDeps) return true;
-
-    for (let i = 0; i < oldDeps.length; i++) {
-        if (!Object.is(oldDeps[i], newDeps[i])) return false;
-    }
-
-    return true;
-}
-
 
 /**useCreation 增强useMemo和useRef,避免useMemo拿不到最新值的情况
  * 
@@ -31,7 +14,7 @@ const useCreation = <T>(fn: () => T, deps: DependencyList) => {
         initialized: false,
     });
 
-    if (current.initialized === false || !depAreSame(current.deps, deps)) {
+    if (current.initialized === false || !depsAreSame(current.deps, deps)) {
         current.deps = deps;
         current.obj = fn();
         current.initialized = true;

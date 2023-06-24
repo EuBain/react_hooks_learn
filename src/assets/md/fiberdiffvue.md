@@ -1,0 +1,9 @@
+# react与vue的差异
+
+vue对状态做代理，在vue3中vue使用到了proxy来代理，给每一个状态都添加了proxy来
+监听数据变化，同时触发对应的组件重新render
+
+react中，触发状态更新主要是通过setstateAPI来重新渲染，而且是触发整个vdom的重
+新更新，这样衍生而来的fiber架构就是用来解决整个vdom树整体对比更新产生的问题。
+
+react与vue最大的不同就是源于对状态管理方式不同产生的

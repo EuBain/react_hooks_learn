@@ -5,6 +5,13 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    //基路径
+    "baseUrl": ".",
+    //配置路径
+    "paths": {
+      "@/*": ["src/*"],
+      "@hooks/*": ["src/hooks/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",

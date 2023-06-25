@@ -16,3 +16,15 @@
 4. useReactive
 
     使用Proxy和Reflect对数据进行监听，数据发生变化时使用useState触发视图更新，完成响应式，不需要写useState
+
+5. useEventEmitter
+
+    事件通信hook，适合距离较远的组件之间的进行事件通知，或是在多个组件之间共享事件通知
+
+6. useControllableValue
+
+    帮助管理状态能同时被外部控制及自己管理的hook
+
+7. useIsomorphicLayoutEffect
+
+    ssr模式下使用useLayoutEffect会出现警告，在非浏览器环境返回useEffect，浏览器环境返回useEffect

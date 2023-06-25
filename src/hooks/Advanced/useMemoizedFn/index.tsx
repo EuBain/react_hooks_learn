@@ -1,14 +1,7 @@
 import { isFunction } from "@/utils";
+import { PickFunction, noop } from "@/utils/hooksType";
 import { useMemo, useRef } from "react";
 
-
-
-type noop = (this: any, ...args: any[]) => any;
-
-type PickFunction<T extends noop> = (
-    this: ThisParameterType<T>,
-    ...args: Parameters<T>
-) => ReturnType<T>;
 
 const isDev = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
 

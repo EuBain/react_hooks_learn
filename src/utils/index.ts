@@ -53,6 +53,8 @@ export const isBrowser = !!(
     window.document.createElement
   );
 
+export const isDev = process.env.NODE_ENV === 'deleopment' || process.env.NODE_ENV === 'test'
+
 /** 使用Object.is对新旧依赖项浅比较
  * 
  * @param oldDeps 旧的参数

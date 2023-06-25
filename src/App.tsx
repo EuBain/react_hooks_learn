@@ -5,9 +5,8 @@ import './App.css'
 import { observer } from 'mobx-react'
 
 import { useRoutes, Navigate  } from 'react-router-dom';
-import { HomeRoutes } from './Home';
 import { routes } from './router/index.tsx';
-import useMemoizedFn from './hooks/Advanced/useMemoizedFn/index.tsx';
+
 
 type OldRender = () => React.ReactElement<any, string | React.JSXElementConstructor<any>> | null
 

@@ -19,6 +19,7 @@
     "marked": "^5.1.0",
     "mobx": "^6.9.0",
     "mobx-react": "^7.6.0",
+    "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.0"

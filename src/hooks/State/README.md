@@ -11,3 +11,7 @@
 3. useDebounce
 
     用来处理防抖值的hook
+
+4. useSetState
+
+    管理Object类型state的hook，用法与class组件的this.setState基本一致

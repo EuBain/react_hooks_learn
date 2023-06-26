@@ -15,3 +15,11 @@
 4. useSetState
 
     管理Object类型state的hook，用法与class组件的this.setState基本一致
+
+5. useToggle
+    
+    可以在两个状态之间切换
+
+6. useBoolean
+
+    使用useToggle来切换boolean的两个状态

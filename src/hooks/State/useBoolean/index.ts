@@ -20,7 +20,7 @@ const useBoolean = (defaultValue = false): [boolean, Actions] => {
             setTrue,
             setFalse,
         };
-    }, [])
+    }, []);
 
     return [state, actions];
 }

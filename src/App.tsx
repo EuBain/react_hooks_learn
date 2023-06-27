@@ -24,12 +24,7 @@ export const Router = ()  => {
   console.log(routes)
   router = useRoutes(routes)
   // return router
-  return (
-    <Suspense fallback={ <h2>Loading... 加载中... </h2> }>
-       {/* <Router /> */}
-       {router}
-    </Suspense>
-  )
+
 }
  // 复写render，代替原先的render，但还是要执行之前的render 函数
 const  render = (fn) => {
@@ -39,9 +34,14 @@ const  render = (fn) => {
 
 function App() {
 
- return  < Router />
-//  return  render ? render(Router) : Router()
-
+//  return  < Router />
+ render ? render(Router) : Router()
+ return (
+  <Suspense fallback={ <h2>Loading... 加载中... </h2> }>
+     {/* <Router /> */}
+     {router}
+  </Suspense>
+)
 }
 
 export default App

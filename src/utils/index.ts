@@ -1,3 +1,4 @@
+import { isEqual } from "lodash";
 import { DependencyList } from "react";
 
 /** 判断对象，且不为null
@@ -74,3 +75,10 @@ export function depsAreSame(
     return true;
   }
 
+/** 依赖项对比
+ * 
+ * @param aDeps 
+ * @param bDeps 
+ * @returns 
+ */
+export const depsEquel = (aDeps: DependencyList = [], bDeps: DependencyList = []) => isEqual(aDeps, bDeps)

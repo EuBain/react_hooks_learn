@@ -22,3 +22,10 @@ export declare interface DebounceOptions {
 }
 
 export declare type EffectHookType = typeof useEffect | typeof useLayoutEffect
+
+
+export declare interface Handle {
+    id: number | NodeJS.Timer
+}
+
+type CreateUpdateEffect = (hook: EffectHookType) => EffectHookType;

@@ -1,6 +1,7 @@
 import { DebounceOptions } from "@/utils/hooksType";
 import { DependencyList, EffectCallback, useEffect, useState } from "react";
 import useDebounceFn from "../useDebounceFn";
+import useUpdateEffect from "../useUpdateEffect";
 
 
 function useDebounceEffect(
@@ -18,5 +19,7 @@ function useDebounceEffect(
         return run();
     }, deps);
 
-    useUpdateEffect
+    useUpdateEffect(effect, [flag]);
 }
+
+export default useDebounceEffect;

@@ -1,6 +1,6 @@
 import { DependencyList, EffectCallback, useEffect, useLayoutEffect, useRef } from "react";
-import { BasicTarget, getTargetElement } from "../domTargets";
-import { depsAreSame } from "..";
+import { BasicTarget, getTargetElement } from "./domTargets";
+import { depsAreSame } from ".";
 import useUnmount from "@/hooks/LifeCycle/useUnmount";
 
 

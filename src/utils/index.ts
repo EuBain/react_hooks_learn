@@ -45,14 +45,17 @@ export const isBoolean = (value: unknown): value is boolean => typeof value === 
  */
 export const isUnd = (value: unknown): value is undefined => typeof value === 'undefined'
 
-/**
- * 判断是否是浏览器window
- */
+/*** 判断是否是浏览器window*/
 export const isBrowser = !!(
     typeof window !== 'undefined' &&
     window.document &&
     window.document.createElement
   );
+
+/**判断苹果设备 */
+export const  isAppleDevice = /(mac|iphone|ipod|ipad)/i.test(
+  typeof navigator !== 'undefined' ? navigator?.platform : ''
+);
 
 export const isDev = process.env.NODE_ENV === 'deleopment' || process.env.NODE_ENV === 'test'
 

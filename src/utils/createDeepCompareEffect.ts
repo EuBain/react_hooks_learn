@@ -1,6 +1,6 @@
 import { DependencyList, useEffect, useLayoutEffect, useRef } from "react";
-import { CreateUpdateEffect } from "./hooksType";
 import { depsEquel } from ".";
+import { CreateUpdateEffect } from "./hooksType";
 
 export const createDeepCompareEffect: CreateUpdateEffect = (hook) => (effect, deps) => {
     const ref = useRef<DependencyList>();

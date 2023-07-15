@@ -27,8 +27,11 @@ GitHub的源码地址及安装包下载地址：[nvm-windows下载地址](https:
 5. 使用nvm   简写指令无法识别
 
 查看已安装的node版本  nvm list 或者nvm ls
+
 安装新node版本       nvm install [版本号]
+
 切换node版本         nvm use [版本号]
+
 卸载node版本         nvm uninstall [版本号]
 
 1.1.11版本不需要另外安装对应的npm包，在安装node版本时会自动装好对应的npm包

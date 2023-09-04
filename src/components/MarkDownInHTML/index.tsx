@@ -4,6 +4,8 @@ import axios from 'axios'
 import { marked } from 'marked'
 import React, { useEffect, useRef } from 'react'
 
+marked.use({mangle: false,headerIds: false})
+
 type Iprops = {
   url: string,
 }

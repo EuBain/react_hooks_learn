@@ -1,6 +1,6 @@
 import useCreation from "../useCreation";
 import useLastest from "../useLastest";
-import useUpdate from "../../Effcet/useUpdate";
+import useUpdate from "../../Effect/useUpdate";
 
 
 

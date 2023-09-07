@@ -1,14 +1,7 @@
 import { isFunction } from "@/utils";
+import { PickFunction, noop } from "@/utils/hooksType";
 import { useMemo, useRef } from "react";
 
-
-
-type noop = (this: any, ...args: any[]) => any;
-
-type PickFunction<T extends noop> = (
-    this: ThisParameterType<T>,
-    ...args: Parameters<T>
-) => ReturnType<T>;
 
 const isDev = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
 
@@ -27,6 +20,12 @@ function useMemoizedFn<T extends noop>(fn: T) {
 
     const memoizedFn = useRef<PickFunction<T>>();
     if (!memoizedFn.current) {
+        /** 返回出的函数使用闭包保证地址不发生变化，函数内部返回的通过apply执行，跟随入参的变化
+         * 
+         * @param this 
+         * @param args 
+         * @returns 
+         */
         memoizedFn.current = function (this, ...args) {
             return fnRef.current.apply(this, args);
         };
